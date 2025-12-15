@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เว็บไซต์หน้าเดียว</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0d6efd;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #084298;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    footer {
+      background: #212529;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+    button {
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #084298;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ยินดีต้อนรับสู่เว็บไซต์ของผม</h1>
+    <p>ตัวอย่างเว็บ index.html หน้าเดียว</p>
+  </header>
+
+  <nav>
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+
+  <section id="home">
+    <div class="card">
+      <h2>หน้าแรก</h2>
+      <p>นี่คือหน้าเว็บแบบหน้าเดียว (Single Page)</p>
+      <button onclick="alert('สวัสดีครับ!')">กดปุ่ม</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="card">
+      <h2>เกี่ยวกับเว็บไซต์</h2>
+      <p>เว็บไซต์นี้เขียนด้วย HTML + CSS + JavaScript แบบพื้นฐาน</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>ติดต่อเรา</h2>
+      <p>Email: example@email.com</p>
+      <p>โทร: 0xx-xxx-xxxx</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 เว็บไซต์ตัวอย่าง</p>
+  </footer>
+
+</body>
+</html>
