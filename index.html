@@ -1,109 +1,144 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>เว็บไซต์หน้าเดียว</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    body {
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #0d6efd;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #084298;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    footer {
-      background: #212529;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-    }
-    button {
-      background: #0d6efd;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #084298;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>ยินดีต้อนรับสู่เว็บไซต์ของผม</h1>
-    <p>ตัวอย่างเว็บ index.html หน้าเดียว</p>
-  </header>
+<!-- NAV -->
+<nav class="navbar">
+    <div class="logo">MyPortfolio</div>
 
-  <nav>
-    <a href="#home">หน้าแรก</a>
-    <a href="#about">เกี่ยวกับ</a>
-    <a href="#contact">ติดต่อ</a>
-  </nav>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cert">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-  <section id="home">
-    <div class="card">
-      <h2>หน้าแรก</h2>
-      <p>นี่คือหน้าเว็บแบบหน้าเดียว (Single Page)</p>
-      <button onclick="alert('สวัสดีครับ!')">กดปุ่ม</button>
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="hero-box">
+
+        <!-- FIXED IMAGE PATH -->
+        <img src="/images/me.jfif" class="profile-img" alt="profile">
+        <h1>สวัสดีครับ<br><span>นายวัชรชัย ลาพงค์</span></h1>
+        <p>Front-End Developer | Web Designer</p>
+
     </div>
-  </section>
+</section>
+<!-- PERSONAL INFO -->
+<section class="info-section">
 
-  <section id="about">
-    <div class="card">
-      <h2>เกี่ยวกับเว็บไซต์</h2>
-      <p>เว็บไซต์นี้เขียนด้วย HTML + CSS + JavaScript แบบพื้นฐาน</p>
+    <h2>ข้อมูลส่วนตัว</h2>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>ชื่อจริง</h3>
+            <p>นายวัชรชัย ลาพงค์</p>
+        </div>
+
+        <div class="info-card">
+            <h3>ชื่อเล่น</h3>
+            <p>เต้</p>
+        </div>
+
+        <div class="info-card">
+            <h3>อายุ</h3>
+            <p>19 ปี</p>
+        </div>
+
+        <div class="info-card">
+            <h3>งานอดิเรก</h3>
+            <p>เล่นเกม,ฟังเพลง</p>
+        </div>
+
+        <div class="info-card">
+            <h3>สีที่ชอบ</h3>
+            <p>สีน้ำเงิน / ดำ / ขาว</p>
+        </div>
+
+        <div class="info-card">
+            <h3>ความชอบ</h3>
+            <p>Ai และเทคโนโลยีใหม่ ๆ</p>
+        </div>
+
+        <div class="info-card">
+            <h3>จบจาก</h3>
+            <p>วิทยาลัยการอาชีพศรึสะเกษ</p>
+        </div>
+
+        <div class="info-card">
+            <h3>ปัจจุบันเรียนที่</h3>
+            <p>วิทยาลัยการอาชีพศรึสะเกษ</p>
+        </div>
+
     </div>
-  </section>
 
-  <section id="contact">
-    <div class="card">
-      <h2>ติดต่อเรา</h2>
-      <p>Email: example@email.com</p>
-      <p>โทร: 0xx-xxx-xxxx</p>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="cert" class="certificates">
+    <h2>Certificates</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="./images/cert1.jpg" alt="cert1">
+            <p>HTML & CSS</p>
+        </div>
+
+        <div class="card">
+            <img src="./images/cert2.jpg" alt="cert2">
+            <p>Programming</p>
+        </div>
+
+        <div class="card">
+            <img src="./images/cert3.jpg" alt="cert3">
+            <p>JavaScript</p>
+        </div>
+
     </div>
-  </section>
+</section>
 
-  <footer>
-    <p>© 2025 เว็บไซต์ตัวอย่าง</p>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <div class="contact-box">
+        <h1>Contact</h1>
+        <p class="contact-text">You can reach me through these platforms</p>
+
+        <div class="contact-grid">
+
+            <a class="contact-card" href="mailto:taywatcharachai@gmail.com">
+                📧 Email
+                <span>taywatcharachai@gmail.com</span>
+            </a>
+
+            <a class="contact-card" href="https://www.facebook.com/share/14bth23Qmjb/?mibextid=wwXIfr" target="_blank">
+                📘 Facebook
+                <span>Visit my profile</span>
+            </a>
+
+            <a class="contact-card" href="https://github.com" target="_blank">
+                💻 GitHub
+                <span>See my projects</span>
+            </a>
+
+        </div>
+
+        <a class="contact-btn" href="mailto:taywatcharachai@gmail.com">
+            Send Message
+        </a>
+    </div>
+</section>
 
 </body>
 </html>
