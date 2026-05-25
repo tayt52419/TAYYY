@@ -199,42 +199,91 @@ section h2{
 }
 
 /* ================= CERT ================= */
+/* ================= CERTIFICATES (UPGRADED IMAGE UI) ================= */
+
+.certificates-section{
+    min-height: 100vh;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.certificates-section h2{
+    font-size: 40px;
+    color: #00f7ff;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.cert-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
 .cert-card{
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.06);
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    transition: 0.35s ease;
+    cursor: pointer;
+    position: relative;
 }
 
+/* hover glow */
 .cert-card:hover{
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-12px) scale(1.02);
     box-shadow: 0 0 25px rgba(0,247,255,0.4);
+    border-color: #00f7ff;
 }
 
+/* IMAGE FIX (สำคัญ) */
 .cert-card img{
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: 0.4s ease;
 }
 
+/* zoom image on hover */
+.cert-card:hover img{
+    transform: scale(1.08);
+}
+
+/* TEXT AREA */
 .cert-info{
-    padding: 20px;
+    padding: 18px;
+    text-align: left;
 }
 
-.cert-info h2{
-    font-size: 20px;
+.cert-info h3{
+    font-size: 18px;
     color: #00f7ff;
+    margin-bottom: 5px;
 }
 
-/* ================= CONTACT (FIXED + MODERN) ================= */
-.contact-section{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cert-info p{
+    font-size: 14px;
+    color: #ccc;
 }
 
+/* bottom glow line */
+.cert-card::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #00f7ff;
+    transition: 0.4s;
+}
+
+.cert-card:hover::after{
+    width: 100%;
+}
 .contact-box{
     text-align: center;
     max-width: 900px;
